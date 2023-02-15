@@ -4,12 +4,15 @@
     "module": "commonjs",
     "lib": ["es6"],
     "allowJs": true,
-    "outDir": "build",
+    "outDir": "build" /* Redirect output structure to the directory. */,
+
     "rootDir": "src",
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "typeRoots": ["/src/mongodb/mongoose-types.ts"]
-  }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }

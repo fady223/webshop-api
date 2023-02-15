@@ -9,7 +9,7 @@
   "scripts": {
     "start:dev": "npx nodemon",
     "generate-types": "npx mtgen --no-mongoose",
-    "build": "rimraf ./build && tsc"
+    "build": "npx tsc"
   },
   "keywords": [],
   "author": "",
