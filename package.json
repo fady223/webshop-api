@@ -12,11 +12,6 @@
     "generate-types": "npx mtgen --no-mongoose",
     "build": "tsc"
   },
-  "pre-commit": [
-    "ts.check",
-    "build",
-    "add-build"
-  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
