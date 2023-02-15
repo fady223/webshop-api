@@ -1,7 +1,7 @@
 import express from "express"
 import * as dotenv from 'dotenv'
 import cors from "cors"
-import { connectToMongo } from "./mongo"
+import { connectToMongo } from "./mongodb"
 import { orderRouter } from "./controllers/order"
 
 dotenv.config()

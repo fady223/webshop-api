@@ -1,4 +1,5 @@
 import mongoose from "mongoose"
+import { Counter } from "../mongoose-types";
 
 export enum CounterEnum {
     Order = 'B',
@@ -24,11 +25,11 @@ export async function getNextNumber(counterType: CounterEnum): Promise<number> {
 }
 
 
-const CounterSchema = new mongoose.Schema({
+const CounterSchema = new mongoose.Schema<Counter>({
     counterType: { type: String, enum: CounterEnum, required: true },
     sequence_nr: { type: Number, required: true, default: 0 }
 })
 
-const Counter = mongoose.model("Counter", CounterSchema)
+const Counter = mongoose.model<Counter>("Counter", CounterSchema)
 
 export default Counter

@@ -1,26 +1,26 @@
 import { Request, Response, Router } from "express";
 import { Error } from "mongoose";
-import { CounterEnum, getNextNumber } from "../models/Counter";
-import Order from "../models/Order";
+import { CounterEnum, getNextNumber } from "../mongodb/models/Counter";
+import OrderModel from "../mongodb/models/Order";
 const orderRouter = Router();
 
 
 
 orderRouter.get("/orders", async (req: Request, res: Response) => {
-    Order.find({}).then((orders) => {
+    OrderModel.find({}).then((orders) => {
         res.json(orders)
     }).catch((err: Error) => {
         res.json(err)
     })
 })
 
-orderRouter.post("/create_order", async (req: Request, res: Response) => {
+orderRouter.post("/new", async (req: Request, res: Response) => {
     const params = req.params
     const nextOrderNr = await getNextNumber(CounterEnum.Order)
     const orderNr = CounterEnum.Order + nextOrderNr
 
     if (nextOrderNr !== 0) {
-        const order = await Order.create({ _id: orderNr })
+        const order = await OrderModel.create({ _id: orderNr })
         res.json(order)
         return 0
     }
