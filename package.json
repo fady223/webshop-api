@@ -9,7 +9,7 @@
   "scripts": {
     "start": "npx nodemon",
     "generate-types": "npx mtgen --no-mongoose",
-    "build": "rimraf dist && tsc",
+    "build": "npx tsc",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add dist"
   },
