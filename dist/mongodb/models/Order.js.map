@@ -1,0 +1,1 @@
+{"version":3,"file":"Order.js","sourceRoot":"","sources":["../../../src/mongodb/models/Order.ts"],"names":[],"mappings":";;;;;AAAA,wDAA+B;AAI/B,MAAM,WAAW,GAAG,IAAI,kBAAQ,CAAC,MAAM,CAAQ;IAC3C,GAAG,EAAE,MAAM;CACd,CAAC,CAAA;AAEF,MAAM,UAAU,GAAG,kBAAQ,CAAC,KAAK,CAAQ,OAAO,EAAE,WAAW,CAAC,CAAA;AAE9D,kBAAe,UAAU,CAAA"}
