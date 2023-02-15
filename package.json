@@ -7,7 +7,7 @@
     "node": "14.x"
   },
   "scripts": {
-    "start:dev": "npx nodemon",
+    "start": "npx nodemon",
     "generate-types": "npx mtgen --no-mongoose",
     "build": "rimraf dist && tsc",
     "ts.check": "tsc --project tsconfig.json",

@@ -1,4 +1,4 @@
-import express from "express"
+import express, { Response, Request } from "express"
 import * as dotenv from 'dotenv'
 import cors from "cors"
 import { connectToMongo } from "./mongodb"
@@ -11,6 +11,9 @@ const PORT = process.env.PORT
 const app = express();
 app.use(cors())
 app.use("/order", orderRouter)
+app.get("/", (req: Request, res: Response) => {
+    res.send("hello")
+})
 
 connectToMongo()
 
